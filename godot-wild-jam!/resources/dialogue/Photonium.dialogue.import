@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d210glpndoc3l"
+path="res://.godot/imported/Photonium.dialogue-3701322b0342e4f7a3cdbe5525a10f4e.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/Photonium.dialogue"
+dest_files=["res://.godot/imported/Photonium.dialogue-3701322b0342e4f7a3cdbe5525a10f4e.tres"]
+
+[params]
+
+defaults=true

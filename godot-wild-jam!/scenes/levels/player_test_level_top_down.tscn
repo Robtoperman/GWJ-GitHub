@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf3sckm3ay742"]
+
+[ext_resource type="PackedScene" uid="uid://d2486srph4nod" path="res://scenes/player/player_top_down.tscn" id="1_fxkva"]
+[ext_resource type="Script" uid="uid://bdfa6jq6cqffw" path="res://scripts/game_manager/game_manager.gd" id="1_jcxno"]
+[ext_resource type="PackedScene" uid="uid://bqislvihw41br" path="res://scenes/menus/pause_menu.tscn" id="2_jcxno"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="4_4tvtc"]
+
+[node name="PlayerTestLevelTopDown" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("pause_menu")]
+unique_name_in_owner = true
+script = ExtResource("1_jcxno")
+pause_menu = NodePath("../PlayerTopDown/PauseMenu")
+
+[node name="PlayerTopDown" parent="." instance=ExtResource("1_fxkva")]
+position = Vector2(539, 322)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerTopDown"]
+offset = Vector2(0, -100)
+zoom = Vector2(0.605, 0.605)
+
+[node name="PauseMenu" parent="PlayerTopDown" node_paths=PackedStringArray("game_manager") instance=ExtResource("2_jcxno")]
+offset_top = -182.0
+offset_bottom = -182.0
+scale = Vector2(1.53576, 1.53576)
+game_manager = NodePath("../../GameManager")
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(501, 322)
+scale = Vector2(20.0781, 20.0781)
+texture = ExtResource("4_4tvtc")

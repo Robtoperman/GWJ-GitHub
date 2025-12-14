@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2486srph4nod"]
+
+[ext_resource type="Script" uid="uid://cveyox1tuehyr" path="res://scripts/player_scripts/player_top_down.gd" id="1_73udg"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="1_mwx7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73udg"]
+size = Vector2(128, 128)
+
+[node name="PlayerTopDown" type="RigidBody2D"]
+z_index = 1
+gravity_scale = 0.0
+script = ExtResource("1_73udg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mwx7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_73udg")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 72)

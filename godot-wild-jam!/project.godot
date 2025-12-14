@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Godot Wild Jam!"
-run/main_scene="uid://b1auq1u7jmkkn"
+run/main_scene="uid://bf3sckm3ay742"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Gwj88dGlobals="*res://scripts/game_manager/GWJ88DGlobals.gd"
 
 [dialogue_manager]
 
@@ -37,8 +38,8 @@ folder_colors={
 "res://SFX/": "teal",
 "res://art/": "pink",
 "res://music/": "purple",
-"res://resources/": "green",
-"res://scenes/": "yellow",
+"res://resources/": "yellow",
+"res://scenes/": "green",
 "res://scripts/": "red"
 }
 
@@ -76,7 +77,7 @@ pause_unpause={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://resources/dialogue/test_dialogue_1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://resources/dialogue/test_dialogue_1.dialogue", "res://resources/dialogue/Niels1.dialogue", "res://resources/dialogue/Niels2.dialogue", "res://resources/dialogue/NielsSB.dialogue", "res://resources/dialogue/Photonium.dialogue")
 
 [rendering]
 
