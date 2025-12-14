@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1auq1u7jmkkn"]
+[gd_scene load_steps=4 format=3 uid="uid://b1auq1u7jmkkn"]
 
 [ext_resource type="PackedScene" uid="uid://d2qoinetiia0h" path="res://scenes/UI_buttons/change_scene_button.tscn" id="1_xqga4"]
+[ext_resource type="PackedScene" uid="uid://cdm04hq37632y" path="res://scenes/levels/player_test_level.tscn" id="2_2o76q"]
+[ext_resource type="PackedScene" uid="uid://crioyo2j8v3wu" path="res://scenes/UI_buttons/quit_game_button.tscn" id="2_ovrgc"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -21,6 +23,7 @@ offset_right = -261.0
 offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -32,3 +35,7 @@ vertical_alignment = 1
 [node name="PlayButton" parent="VBoxContainer" instance=ExtResource("1_xqga4")]
 layout_mode = 2
 text = "Play"
+scene_to_load = ExtResource("2_2o76q")
+
+[node name="QuitGameButton" parent="VBoxContainer" instance=ExtResource("2_ovrgc")]
+layout_mode = 2

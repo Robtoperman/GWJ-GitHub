@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdm04hq37632y"]
+[gd_scene load_steps=9 format=3 uid="uid://cdm04hq37632y"]
 
+[ext_resource type="Script" uid="uid://bdfa6jq6cqffw" path="res://scripts/game_manager/game_manager.gd" id="1_4w4nu"]
 [ext_resource type="PackedScene" uid="uid://c3yf2s80cx2f1" path="res://scenes/player/player_test.tscn" id="1_a6qgi"]
+[ext_resource type="PackedScene" uid="uid://bqislvihw41br" path="res://scenes/menus/pause_menu.tscn" id="1_e7apk"]
 [ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="2_j6pud"]
 [ext_resource type="PackedScene" uid="uid://dgj4cx2mwhjwg" path="res://scenes/interaction/interactable_dialogue.tscn" id="3_h4ptv"]
 [ext_resource type="Resource" uid="uid://bvv0rbol62ktn" path="res://resources/dialogue/test_dialogue_1.dialogue" id="4_eeeib"]
@@ -13,11 +15,22 @@ size = Vector2(240, 248)
 
 [node name="PlayerTestLevel" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("pause_menu")]
+unique_name_in_owner = true
+script = ExtResource("1_4w4nu")
+pause_menu = NodePath("../PlayerTest/PauseMenu")
+
 [node name="PlayerTest" parent="." instance=ExtResource("1_a6qgi")]
 
 [node name="Camera2D" type="Camera2D" parent="PlayerTest"]
 offset = Vector2(0, -100)
 zoom = Vector2(0.605, 0.605)
+
+[node name="PauseMenu" parent="PlayerTest" node_paths=PackedStringArray("game_manager") instance=ExtResource("1_e7apk")]
+offset_top = -182.0
+offset_bottom = -182.0
+scale = Vector2(1.53576, 1.53576)
+game_manager = NodePath("../../GameManager")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 128)

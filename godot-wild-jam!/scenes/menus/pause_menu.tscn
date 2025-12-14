@@ -1,9 +1,44 @@
-[gd_scene format=3 uid="uid://bqislvihw41br"]
+[gd_scene load_steps=3 format=3 uid="uid://bqislvihw41br"]
+
+[ext_resource type="PackedScene" uid="uid://crioyo2j8v3wu" path="res://scenes/UI_buttons/quit_game_button.tscn" id="1_fwndu"]
+[ext_resource type="Script" uid="uid://bu50kttexxuvd" path="res://scripts/UI_scripts/pause_menu.gd" id="1_gsnt3"]
 
 [node name="PauseMenu" type="Control"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gsnt3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 261.0
+offset_top = 64.0
+offset_right = -261.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+
+[node name="QuitGameButton" parent="VBoxContainer" instance=ExtResource("1_fwndu")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/ResumeGameButton" to="." method="_on_resume"]
