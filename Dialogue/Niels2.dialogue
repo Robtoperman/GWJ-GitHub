@@ -1,0 +1,17 @@
+~ start
+Niels: [wave]NOOOOOOO[/wave]! DID YOU JUST USE THAT PHOTONIUM?? DO YOU KNOW HARD IT IS TO FIND THAT STUFF NOWADAYS???
+Noel: No... What's the big deal anyways? What exactly is Photonium?
+Niels: ... You don't know what Photonium is? The entire world runs off of Photonium! Or at least it used to...
+Noel: What happened?
+Niels: The Facinorous arrived and stole almost all of the Photonium! Now there is only four rods left in this world... Well, it's three now.
+Niels: Um... Actually, Noel? How would you like to accompany me accross these lands and find the rest of the Photonium? With it, we can go confront the Facinorous!
+- Sure! I'll help!
+	Niels: Wonderful! Onwards then!
+- What's in it for me?
+	Niels: I noticed that you're not from around here. I heard the Facinorous also collects many magical items. One of those might be able to get you home...
+	Niels: So, will you come?
+	- Sounds like a good enough deal.
+		Niels: Wonderful! Onwards then!
+	- I'm not too sure about that...
+		Niels: Ugh, fine. I'll accompany you and continue my quest afterwards.
+=> END
