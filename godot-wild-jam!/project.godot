@@ -91,6 +91,11 @@ pause_unpause={
 
 locale/translations_pot_files=PackedStringArray("res://resources/dialogue/test_dialogue_1.dialogue", "res://resources/dialogue/Niels1.dialogue", "res://resources/dialogue/Niels2.dialogue", "res://resources/dialogue/NielsSB.dialogue", "res://resources/dialogue/Photonium.dialogue")
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="NewtonsCradle"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

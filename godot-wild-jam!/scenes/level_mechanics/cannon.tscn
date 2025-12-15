@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://chvxyfqkqj37p"]
+
+[ext_resource type="Script" uid="uid://cr0md2ejo08hh" path="res://scripts/level_mechanics/cannon.gd" id="1_7k58k"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="1_80efn"]
+
+[node name="Cannon" type="Node2D"]
+script = ExtResource("1_7k58k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_80efn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 48)
+scale = Vector2(0.375, 1)
+texture = ExtResource("1_80efn")
+
+[node name="BulletSpawnPoint" type="Node2D" parent="."]
+position = Vector2(0, 112)
+
+[node name="BulletSpawn" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="BulletSpawn" to="." method="_on_bullet_spawn_timeout"]
