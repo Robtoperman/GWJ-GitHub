@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cn7fet54uumsc"
+path="res://.godot/imported/Niels2.dialogue-2271b73af4dfc038ed6f499582ca881a.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/Niels2.dialogue"
+dest_files=["res://.godot/imported/Niels2.dialogue-2271b73af4dfc038ed6f499582ca881a.tres"]
+
+[params]
+
+defaults=true
