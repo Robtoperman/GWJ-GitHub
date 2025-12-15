@@ -23,6 +23,7 @@ pause_menu = NodePath("../PlayerTopDown/PauseMenu")
 
 [node name="PlayerTopDown" parent="." instance=ExtResource("1_fxkva")]
 position = Vector2(539, 322)
+linear_damp = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="PlayerTopDown"]
 zoom = Vector2(0.38, 0.38)
