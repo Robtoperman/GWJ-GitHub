@@ -1,17 +1,23 @@
 extends Node2D
 
-@export var fire_cool_down : float = 3
-@onready var timer: Timer = $BulletSpawn
-@export var bullet_life_time : float = 10
-var bullet = preload("res://scenes/level_mechanics/bullet.tscn")
+var bullet_scene : PackedScene = preload("res://scenes/level_mechanics/bullet.tscn")
+
+@export var fire_rate : float = 1.0
+@export var bullet_speed : float = 300.0
+@export var bullet_life_time : float = 2.0
+@export_enum("Left and Right", "Up and Down") var split_direction: String
 
 
 func _ready() -> void:
-	timer.start()
-	timer.wait_time = fire_cool_down
+	$ShootTimer.wait_time = fire_rate
+	
+	$ShootTimer.start()
 
 
 func _on_bullet_spawn_timeout() -> void:
-	var bullet_instance = bullet.instantiate()
-	bullet_instance.bullet_life_time = bullet_life_time
-	add_child(bullet_instance)
+	var bullet = bullet_scene.instantiate()
+	bullet.speed = bullet_speed
+	bullet.life_time = bullet_life_time
+	bullet.split_direction = split_direction
+	bullet.position = $BulletSpawnPoint.position
+	add_child(bullet)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjonlli15illj"]
+
+[ext_resource type="Script" uid="uid://quwks6vrhmvy" path="res://scripts/level_mechanics/newtons_cradle_block2.gd" id="1_y70jf"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="2_v35cj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5brjb"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoyon"]
+size = Vector2(128, 128)
+
+[node name="NewtonsCradleBlock2" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_y70jf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0000001)
+texture = ExtResource("2_v35cj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5brjb")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_aoyon")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
