@@ -3,8 +3,13 @@ class_name NewtonsCradleBlock extends CharacterBody2D
 @export var movement_speed : float = 500
 @export var movement_direction : Vector2 = Vector2.ZERO
 var other_block_direction : Vector2 = Vector2.ZERO
-var last_movement_direction : Vector2 = movement_direction
-var block_ready : bool = false
+var colliding_on_start_check : bool = true
+var block_group : Array = Array()
+
+
+func _ready() -> void:
+	# Sets colliding_on_start_check to false after all block scripts have executed once
+	set_deferred("colliding_on_start_check", false)
 
 
 func _physics_process(_delta: float) -> void:
@@ -23,51 +28,33 @@ func _on_body_entered(colliding_object: Node2D) -> void:
 	
 	# Get information from the other block
 	if other_block is NewtonsCradleBlock:
-		last_movement_direction = movement_direction
 		other_block_direction = other_block.movement_direction
 	
+	if other_block is NewtonsCradleBlock and colliding_on_start_check == true:
+		block_group.append(other_block)
 	
 	
 	# Change this blocks information accordingly
-	if other_block is NewtonsCradleBlock:
-		# If this block is not moving and collides with another block, then move this one the same as that blocks movement
-		if !movement_direction:
-			last_movement_direction = movement_direction
-			movement_direction = other_block_direction
-			print(name, " Transfer")
-		# If this block is moving and collides with a block that is not, then set this blocks movement to 0
-		elif movement_direction and not other_block_direction:
-			last_movement_direction = movement_direction
-			movement_direction = Vector2.ZERO
-			print(name, " Stop")
-		# If the block is moving and hits another block that is moving
-		else: 
-			movement_direction = other_block_direction
-			print(name, " Switch")
-	# If the block hits a wall
+	# Set_deferred() sets the first value to the given property at the end of the frame, by passing the script execution order
+	if block_group:
+		pass
 	else:
-		movement_direction = -movement_direction
+		if other_block is NewtonsCradleBlock:
+			# If this block is not moving and collides with another block, then move this one the same as that blocks movement
+			if !movement_direction:
+				set_deferred("movement_direction", other_block_direction)
+				# print(name, " Transfer")
+			# If this block is moving and collides with a block that is not, then set this block's movement to 0
+			elif movement_direction and not other_block_direction:
+				set_deferred("movement_direction", Vector2.ZERO)
+				# print(name, " Stop")
+			# If the block is moving and hits another block that is moving
+			else: 
+				set_deferred("movement_direction", other_block_direction)
+				# print(name, " Switch")
+		# If the block hits a wall
+		else:
+			movement_direction = -movement_direction
+			# print(name, "Ricochet")
 	
-	
-	
-	
-	# Set the last_movement_direction variable if the direction changes
-	#if movement_direction:
-	#	last_movement_direction = movement_direction
-	#	print(name, ": Last movement direction change: ", last_movement_direction)
-	#
-	# If the block hits another block
-	#if other_object is NewtonsCradleBlock:
-	#	# If this block is not moving, set the movement to that of the other block
-	#	if !movement_direction:
-	#		movement_direction = other_object.last_movement_direction
-	#		print(name, " collided ", movement_direction)
-	#	
-	#	# If this block is moving and the other block is not moving, set this blocks movement to 0
-	#	elif movement_direction and other_object.last_movement_direction != last_movement_direction:
-	#		movement_direction = Vector2.ZERO
-	#		print(name, " stop: ", movement_direction)
-	#
-	# If the block hits something that is not another block, bounce off of it
-	#else:
-	#	movement_direction = -movement_direction
+	# print(name, ": ", block_group)
