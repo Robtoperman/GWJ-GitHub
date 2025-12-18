@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d103qduhig6dt"]
+
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="1_4bq1r"]
+[ext_resource type="Script" uid="uid://cn0mr4a3fgqtk" path="res://scripts/player_scripts/character_body_2d.gd" id="1_s25n1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bq1r"]
+size = Vector2(128, 128)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
+motion_mode = 1
+script = ExtResource("1_s25n1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4bq1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4bq1r")
+
+[node name="GunRotationPivot" type="Node2D" parent="."]
+
+[node name="GunSpawnPoint" type="Node2D" parent="GunRotationPivot"]
+position = Vector2(0, 112)

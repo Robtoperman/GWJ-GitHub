@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ohokgny5sjor"]
+
+[ext_resource type="Script" uid="uid://bn3votu5ay84s" path="res://scripts/level_mechanics/newtons_cradle_block2.gd" id="1_5brjb"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="1_w8u7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5brjb"]
+size = Vector2(112, 112)
+
+[node name="NewtonsCradleBlock" type="CharacterBody2D"]
+script = ExtResource("1_5brjb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w8u7s")
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+target_position = Vector2(0, -64)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-64, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(64, 0)
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5brjb")

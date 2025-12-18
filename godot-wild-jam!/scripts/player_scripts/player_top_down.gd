@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var movement_speed : float = 10.0
+@export var movement_speed : float = 100.0
 @export var max_speed : float = 1000.0
 @export var drag_factor : float = 50.0
 var character_direction : Vector2
