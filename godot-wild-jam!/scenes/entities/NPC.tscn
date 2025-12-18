@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3kt5j53cmfbk"]
+
+[ext_resource type="Script" uid="uid://duhjr0gov7r6w" path="res://scripts/interaction_scripts/interactable_dialogue.gd" id="1_3g7wh"]
+[ext_resource type="Texture2D" uid="uid://dqpgk1tqlubpo" path="res://art/UI/Sprite-0001.png" id="2_mm6je"]
+
+[node name="NPC" type="Area2D"]
+script = ExtResource("1_3g7wh")
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(0, -128)
+scale = Vector2(4, 4)
+texture = ExtResource("2_mm6je")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

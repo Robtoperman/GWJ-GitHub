@@ -7,6 +7,7 @@
 size = Vector2(128, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
 motion_mode = 1
 script = ExtResource("1_s25n1")
 
@@ -16,4 +17,7 @@ texture = ExtResource("1_4bq1r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4bq1r")
 
-[node name="GunRotation" type="Node2D" parent="."]
+[node name="GunRotationPivot" type="Node2D" parent="."]
+
+[node name="GunSpawnPoint" type="Node2D" parent="GunRotationPivot"]
+position = Vector2(0, 112)

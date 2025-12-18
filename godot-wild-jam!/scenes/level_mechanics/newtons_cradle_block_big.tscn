@@ -1,23 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjonlli15illj"]
+[gd_scene load_steps=5 format=3 uid="uid://dyss8bb0vl4x"]
 
-[ext_resource type="Script" uid="uid://quwks6vrhmvy" path="res://scripts/level_mechanics/newtons_cradle_block.gd" id="1_y70jf"]
-[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="2_v35cj"]
+[ext_resource type="Script" uid="uid://quwks6vrhmvy" path="res://scripts/level_mechanics/newtons_cradle_block.gd" id="1_cmx0f"]
+[ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="2_fs76q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5brjb"]
-size = Vector2(128, 128)
+size = Vector2(384, 384)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aoyon"]
-size = Vector2(128, 128)
+size = Vector2(384, 384)
 
-[node name="NewtonsCradleBlock" type="CharacterBody2D"]
+[node name="NewtonsCradleBlockBig" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
 motion_mode = 1
-script = ExtResource("1_y70jf")
+script = ExtResource("1_cmx0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1.0000001)
-texture = ExtResource("2_v35cj")
+scale = Vector2(3, 3.0000005)
+texture = ExtResource("2_fs76q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5brjb")

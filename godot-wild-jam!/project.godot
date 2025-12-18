@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot Wild Jam!"
-run/main_scene="uid://bf3sckm3ay742"
+run/main_scene="uid://dxa1668eil82a"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Gwj88dGlobals="*res://scripts/game_manager/GWJ88DGlobals.gd"
-NewtonsCradleGlobal="*res://scripts/level_mechanics/newtons_cradle_global.gd"
+NewtonsCradleGlobal="res://scripts/level_mechanics/newtons_cradle_global.gd"
 
 [dialogue_manager]
 

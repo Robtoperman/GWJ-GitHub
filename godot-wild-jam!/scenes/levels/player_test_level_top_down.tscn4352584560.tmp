@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bf3sckm3ay742"]
+[gd_scene load_steps=10 format=4 uid="uid://bf3sckm3ay742"]
 
 [ext_resource type="Script" uid="uid://bdfa6jq6cqffw" path="res://scripts/game_manager/game_manager.gd" id="1_jcxno"]
 [ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="4_4tvtc"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dyss8bb0vl4x" path="res://scenes/level_mechanics/newtons_cradle_block_big.tscn" id="5_d5tru"]
 [ext_resource type="PackedScene" uid="uid://chvxyfqkqj37p" path="res://scenes/level_mechanics/cannon.tscn" id="5_qx1lp"]
 [ext_resource type="PackedScene" uid="uid://bjonlli15illj" path="res://scenes/level_mechanics/newtons_cradle_block.tscn" id="5_tpw73"]
-[ext_resource type="PackedScene" uid="uid://dk3lhyy7tjigs" path="res://scenes/level_mechanics/ice_ground.tscn" id="7_d5tru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4tvtc"]
 texture = ExtResource("4_4tvtc")
@@ -27,6 +26,7 @@ unique_name_in_owner = true
 script = ExtResource("1_jcxno")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_tpw73")]
+z_index = 5
 position = Vector2(640, 256)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -80,13 +80,13 @@ movement_direction = Vector2(1, 0)
 [node name="NewtonsCradleBlocksBig" type="Node2D" parent="."]
 
 [node name="NewtonsCradleBlockBig" parent="NewtonsCradleBlocksBig" instance=ExtResource("5_d5tru")]
-position = Vector2(-1536, -232)
+position = Vector2(-1536, -424)
 
 [node name="NewtonsCradleBlockBig2" parent="NewtonsCradleBlocksBig" instance=ExtResource("5_d5tru")]
-position = Vector2(-1536, 168)
+position = Vector2(-1536, 824)
 
 [node name="NewtonsCradleBlockBig3" parent="NewtonsCradleBlocksBig" instance=ExtResource("5_d5tru")]
-position = Vector2(-1536, 576)
+position = Vector2(-1536, 152)
 movement_direction = Vector2(0, 1)
 
 [node name="Cannons" type="Node2D" parent="."]
@@ -198,13 +198,3 @@ texture = ExtResource("4_4tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Walls8"]
 shape = SubResource("RectangleShape2D_4tvtc")
-
-[node name="IcePatches" type="Node2D" parent="."]
-
-[node name="IceGround" parent="IcePatches" instance=ExtResource("7_d5tru")]
-position = Vector2(640, -1280)
-scale = Vector2(7.9, 7.9)
-
-[node name="IceGround2" parent="IcePatches" instance=ExtResource("7_d5tru")]
-position = Vector2(3839.9998, -3840)
-scale = Vector2(20, 20)
