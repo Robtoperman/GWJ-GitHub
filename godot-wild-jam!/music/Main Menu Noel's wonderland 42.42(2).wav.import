@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcrgbbet663ny"
+path="res://.godot/imported/Main Menu Noel's wonderland 42.42(2).wav-bd61756108e86946edc87d2bd0fc0ede.sample"
+
+[deps]
+
+source_file="res://music/Main Menu Noel's wonderland 42.42(2).wav"
+dest_files=["res://.godot/imported/Main Menu Noel's wonderland 42.42(2).wav-bd61756108e86946edc87d2bd0fc0ede.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bna2c7u7t3ru5"]
+
+[ext_resource type="AudioStream" uid="uid://bfy7y5ktmxd8g" path="res://music/Bounce-da-Boing 58-116(2).wav" id="1_u6tok"]
+[ext_resource type="Script" uid="uid://d0k2ap0solc2" path="res://bounce_da_boing_player.gd" id="2_2nsmu"]
+
+[node name="Bounce-da-boing-player" type="AudioStreamPlayer"]
+stream = ExtResource("1_u6tok")
+autoplay = true
+script = ExtResource("2_2nsmu")
