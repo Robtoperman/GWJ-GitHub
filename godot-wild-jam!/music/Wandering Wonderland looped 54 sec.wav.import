@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b546ak0pov3om"
+path="res://.godot/imported/Wandering Wonderland looped 54 sec.wav-56d24e8318a40456739fc9fcd0585c58.sample"
+
+[deps]
+
+source_file="res://music/Wandering Wonderland looped 54 sec.wav"
+dest_files=["res://.godot/imported/Wandering Wonderland looped 54 sec.wav-56d24e8318a40456739fc9fcd0585c58.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
