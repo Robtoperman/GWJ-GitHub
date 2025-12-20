@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2qcnxjshwdqf"]
+
+[ext_resource type="AudioStream" uid="uid://cglhu1i70uurg" path="res://music/Niels final theme 112.26.wav" id="1_7d6eb"]
+[ext_resource type="Script" uid="uid://j1pg5tn8vpkn" path="res://music/niels_final_theme_player.gd" id="2_yijs6"]
+
+[node name="Niels final theme player" type="AudioStreamPlayer"]
+stream = ExtResource("1_7d6eb")
+autoplay = true
+script = ExtResource("2_yijs6")

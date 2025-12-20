@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://crteawrxhn6yk"]
+
+[ext_resource type="AudioStream" uid="uid://tu7ytjvd6rxg" path="res://SFX/Other/Collision¿.wav" id="1_bhph0"]
+
+[node name="CollisionPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_bhph0")
+volume_db = 4.039
+pitch_scale = 0.4
+autoplay = true

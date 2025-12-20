@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c24fnicf3g7wy"
+path="res://.godot/imported/Ssssssh 2.wav-f9290986d2a15425e23b4f3ce858f486.sample"
+
+[deps]
+
+source_file="res://SFX/NPCs/Ssssssh 2.wav"
+dest_files=["res://.godot/imported/Ssssssh 2.wav-f9290986d2a15425e23b4f3ce858f486.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cska4ivpwsic3"]
+
+[ext_resource type="AudioStream" uid="uid://bkh74rso6kkwk" path="res://SFX/Other/Feynman (DON'T USE).wav" id="1_4v0j6"]
+[ext_resource type="Script" uid="uid://bj88dvk03tpnm" path="res://feynman_stick_player.gd" id="2_lkyoq"]
+
+[node name="FeynmanStickPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_4v0j6")
+volume_db = -10.097
+script = ExtResource("2_lkyoq")

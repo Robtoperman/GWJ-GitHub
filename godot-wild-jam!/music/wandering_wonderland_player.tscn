@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://br35q64ubdpkw"]
+
+[ext_resource type="AudioStream" uid="uid://b546ak0pov3om" path="res://music/Wandering Wonderland looped 54 sec.wav" id="1_57rkc"]
+[ext_resource type="Script" uid="uid://cte4ipg6sa6v3" path="res://music/wandering_wonderland_player.gd" id="2_vli07"]
+
+[node name="Wandering Wonderland player" type="AudioStreamPlayer"]
+stream = ExtResource("1_57rkc")
+autoplay = true
+script = ExtResource("2_vli07")

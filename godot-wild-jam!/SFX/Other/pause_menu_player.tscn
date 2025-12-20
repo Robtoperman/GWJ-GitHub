@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2hx4f1c72t2s"]
+
+[ext_resource type="AudioStream" uid="uid://dfscprorcy7sg" path="res://SFX/Other/Pause menu.wav" id="1_wwlmo"]
+
+[node name="Pause menu Player" type="AudioStreamPlayer"]
+stream = ExtResource("1_wwlmo")
+volume_db = 2.862

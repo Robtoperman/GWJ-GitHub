@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjd805i21ikx8"]
+
+[ext_resource type="AudioStream" uid="uid://lyjasyx6fkog" path="res://music/Sticky ice not sticky _(  24-84.wav" id="1_3ne8s"]
+[ext_resource type="Script" uid="uid://degklm84ve62e" path="res://music/audio_stream_player.gd" id="2_0ylmy"]
+
+[node name="Notsticky-ice" type="AudioStreamPlayer"]
+stream = ExtResource("1_3ne8s")
+pitch_scale = 1.1
+autoplay = true
+script = ExtResource("2_0ylmy")
