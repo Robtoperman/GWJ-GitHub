@@ -11,7 +11,7 @@ func pause_game():
 func unpause_game():
 	Engine.time_scale = 1
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause_unpause") and not game_paused:
 		game_paused = true
 		pause_menu.show()

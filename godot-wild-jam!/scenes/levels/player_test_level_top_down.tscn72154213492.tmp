@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bf3sckm3ay742"]
+[gd_scene load_steps=13 format=4 uid="uid://bf3sckm3ay742"]
 
 [ext_resource type="Script" uid="uid://bdfa6jq6cqffw" path="res://scripts/game_manager/game_manager.gd" id="1_jcxno"]
 [ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="4_4tvtc"]
@@ -22,12 +22,6 @@ sources/0 = SubResource("TileSetAtlasSource_4tvtc")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tvtc"]
 size = Vector2(128, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sijoo"]
-size = Vector2(112, 112)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5dxq"]
-size = Vector2(128.00009, 128)
-
 [node name="PlayerTestLevelTopDown" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -36,6 +30,7 @@ script = ExtResource("1_jcxno")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_tpw73")]
 position = Vector2(640, 256)
+movement_speed = 1000.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(0.38, 0.38)
@@ -223,9 +218,6 @@ shape = SubResource("RectangleShape2D_4tvtc")
 position = Vector2(640, -1280)
 scale = Vector2(8, 8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IcePatches/IceGround"]
-shape = SubResource("RectangleShape2D_sijoo")
-
 [node name="IceGround2" parent="IcePatches" instance=ExtResource("7_d5tru")]
 position = Vector2(3839.9998, -3840)
 scale = Vector2(20, 20)
@@ -240,7 +232,3 @@ position = Vector2(256, -896)
 [node name="Pit" parent="Pits" instance=ExtResource("9_p5dxq")]
 position = Vector2(-1536, 231.99998)
 scale = Vector2(7, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pits/Pit"]
-position = Vector2(7.6293945e-05, 9.536743e-07)
-shape = SubResource("RectangleShape2D_p5dxq")

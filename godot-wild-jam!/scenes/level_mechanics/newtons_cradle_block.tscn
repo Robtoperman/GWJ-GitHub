@@ -10,8 +10,9 @@ size = Vector2(128, 128)
 size = Vector2(128, 128)
 
 [node name="NewtonsCradleBlock" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 3
-collision_mask = 3
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_y70jf")
 
@@ -25,7 +26,7 @@ disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 3
-collision_mask = 3
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_aoyon")

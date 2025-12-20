@@ -22,10 +22,11 @@ func explode():
 	
 	# Rotates the direction vector of the smaller bullets
 	if split_direction == "Left and Right":
-		left_small_bullet.direction = direction.rotated(deg_to_rad(90))  # Goes left
+		left_small_bullet.direction = direction.rotated(deg_to_rad(90))  # Goes Left
 	else:
 		left_small_bullet.direction = direction.rotated(deg_to_rad(180)) # Goes Up
 		
+	#call_deferred("get_tree().add_child()", left_small_bullet)
 	get_parent().add_child(left_small_bullet)
 	#endregion
 	
