@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1rd3ebkmyyy2"]
+
+[ext_resource type="Script" uid="uid://cll1b6tofebyn" path="res://scripts/level_mechanics/ice_block.gd" id="1_6bvpo"]
+[ext_resource type="Texture2D" uid="uid://cuse3jjpptygc" path="res://ice_texture.tres" id="1_vbsi7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bvpo"]
+size = Vector2(256, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gal8b"]
+size = Vector2(224, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asqar"]
+size = Vector2(8, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4t86x"]
+size = Vector2(8, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbsi7"]
+size = Vector2(224, 8)
+
+[node name="IceBlock" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6bvpo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.21122721, 0.46290296, 0.7397654, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_vbsi7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6bvpo")
+
+[node name="TopArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TopArea"]
+position = Vector2(0, -132)
+shape = SubResource("RectangleShape2D_gal8b")
+
+[node name="LeftArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LeftArea"]
+position = Vector2(-132, 0)
+shape = SubResource("RectangleShape2D_asqar")
+
+[node name="RightArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RightArea"]
+position = Vector2(132, 0)
+shape = SubResource("RectangleShape2D_4t86x")
+
+[node name="BottomArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomArea"]
+position = Vector2(0, 132)
+shape = SubResource("RectangleShape2D_vbsi7")
+
+[connection signal="area_entered" from="TopArea" to="." method="_slime_hit_top"]
+[connection signal="area_entered" from="LeftArea" to="." method="_slime_hit_left"]
+[connection signal="area_entered" from="RightArea" to="." method="_slime_hit_right"]
+[connection signal="area_entered" from="BottomArea" to="." method="_slime_hit_bottom"]

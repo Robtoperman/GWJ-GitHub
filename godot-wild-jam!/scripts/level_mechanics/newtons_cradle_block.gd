@@ -1,5 +1,7 @@
 class_name NewtonsCradleBlock extends CharacterBody2D
 
+@onready var area: Area2D = $Area2D
+
 @export var movement_speed : float = 500
 @export var movement_direction : Vector2 = Vector2.ZERO
 @export var top_block : Node2D
@@ -11,6 +13,9 @@ var set_group_done : bool = false
 func _ready() -> void:
 	# Sets colliding_on_start_check to false after all block scripts have executed once
 	set_deferred("set_group_done", true)
+	
+	area.monitoring = false
+	area.set_deferred("monitoring", true)
 
 
 func _physics_process(_delta: float) -> void:

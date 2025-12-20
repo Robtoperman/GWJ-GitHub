@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh5mbhiwbpnpo"]
+
+[ext_resource type="Script" uid="uid://1vitrl5cdu47" path="res://scripts/level_mechanics/pit.gd" id="1_cvish"]
+[ext_resource type="Texture2D" uid="uid://cuse3jjpptygc" path="res://ice_texture.tres" id="1_ya75q"]
+
+[node name="Pit" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_cvish")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.14044744, 0.14044744, 0.14044744, 1)
+texture = ExtResource("1_ya75q")

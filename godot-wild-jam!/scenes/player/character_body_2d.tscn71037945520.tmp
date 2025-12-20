@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d103qduhig6dt"]
+[gd_scene load_steps=6 format=3 uid="uid://d103qduhig6dt"]
 
 [ext_resource type="Texture2D" uid="uid://do31jykrqc8ui" path="res://icon.svg" id="1_4bq1r"]
 [ext_resource type="Script" uid="uid://cn0mr4a3fgqtk" path="res://scripts/player_scripts/character_body_2d.gd" id="1_s25n1"]
@@ -8,9 +8,6 @@
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
-size = Vector2(128, 128)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqqr5"]
 size = Vector2(128, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -44,26 +41,14 @@ texture = ExtResource("1_4bq1r")
 [node name="PlayerJumpTimeUp" type="Timer" parent="."]
 
 [node name="PlayerJumpTimeDown" type="Timer" parent="."]
-wait_time = 0.15
 
-[node name="AreaCradles" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
-monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCradles"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_lxlh8")
-
-[node name="AreaPit" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPit"]
-shape = SubResource("RectangleShape2D_yqqr5")
 
 [connection signal="timeout" from="PlayerJumpTimeUp" to="." method="_on_player_jump_time_over"]
 [connection signal="timeout" from="PlayerJumpTimeDown" to="." method="_on_player_jump_time_down_timeout"]
-[connection signal="area_entered" from="AreaCradles" to="." method="_on_cradle_block"]
-[connection signal="area_exited" from="AreaCradles" to="." method="_on_area_2d_area_exited"]
-[connection signal="area_entered" from="AreaPit" to="." method="_above_pit"]
-[connection signal="area_exited" from="AreaPit" to="." method="_not_above_pit"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_cradle_block"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
