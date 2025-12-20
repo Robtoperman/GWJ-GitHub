@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://criw57ownjltw"]
+
+[ext_resource type="AudioStream" uid="uid://cxfh7prmwtd2e" path="res://SFX/Other/glop sfx.wav" id="1_5if8j"]
+
+[node name="GlopPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_5if8j")
+volume_db = -11.45
+pitch_scale = 1.26

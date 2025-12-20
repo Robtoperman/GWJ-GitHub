@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2gu820cg3q24"]
+
+[ext_resource type="AudioStream" uid="uid://dlgv5wg4ldygo" path="res://SFX/Other/Boing 1.wav" id="1_ougde"]
+
+[node name="Boing1Player" type="AudioStreamPlayer"]
+stream = ExtResource("1_ougde")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgl32pmxshhf1"
+path="res://.godot/imported/Grumbert 3.wav-ca19da09f6ae773296006857f51b342e.sample"
+
+[deps]
+
+source_file="res://SFX/NPCs/Grumbert 3.wav"
+dest_files=["res://.godot/imported/Grumbert 3.wav-ca19da09f6ae773296006857f51b342e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

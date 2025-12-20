@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl4p3k87oxqkt"
+path="res://.godot/imported/Scribus 3.wav-c71e267c13e144a8277d45c7f68ea701.sample"
+
+[deps]
+
+source_file="res://SFX/NPCs/Scribus 3.wav"
+dest_files=["res://.godot/imported/Scribus 3.wav-c71e267c13e144a8277d45c7f68ea701.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

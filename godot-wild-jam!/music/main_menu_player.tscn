@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xcueou2bt0bf"]
 
 [ext_resource type="AudioStream" uid="uid://dcrgbbet663ny" path="res://music/Main Menu Noel's wonderland 42.42(2).wav" id="1_55x7w"]
-[ext_resource type="Script" uid="uid://degklm84ve62e" path="res://audio_stream_player.gd" id="2_1sw67"]
+[ext_resource type="Script" uid="uid://degklm84ve62e" path="res://music/audio_stream_player.gd" id="2_1sw67"]
 
 [node name="MainMenu player" type="AudioStreamPlayer"]
 stream = ExtResource("1_55x7w")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfngo6584gtfd"]
+
+[ext_resource type="AudioStream" uid="uid://e4nrug3doeof" path="res://SFX/Other/Puzzle solved.wav" id="1_cyyhn"]
+
+[node name="Puzzle solved Player" type="AudioStreamPlayer"]
+stream = ExtResource("1_cyyhn")
+volume_db = 4.574
+pitch_scale = 1.73

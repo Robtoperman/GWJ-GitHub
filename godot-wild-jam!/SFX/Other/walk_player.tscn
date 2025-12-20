@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dinnxb0ht5n1h"]
+
+[ext_resource type="AudioStream" uid="uid://cis0yoihfgvru" path="res://SFX/Other/walk sfx loop.wav" id="1_66lx1"]
+
+[node name="WalkPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_66lx1")
+volume_db = 6.059
