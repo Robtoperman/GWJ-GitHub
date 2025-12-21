@@ -1,7 +1,0 @@
-~ start
-if not Gwj88dGlobals.has_found_photonium
-	set Gwj88dGlobals.has_found_photonium = true
-	Noel: I found... a glowing wavy stick?
-else 
-	Noel: I found a rod of Photonium!
-=> END
